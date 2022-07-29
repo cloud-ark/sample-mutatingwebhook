@@ -10,7 +10,7 @@ registers the mutatingwebhookconfiguration object, and creates a Secret
 object with the server key/certificate.
 The webhook container mounts this Secret as a Volume and serves the webhook endpoint.
 
-Check mutatingwebhookconfiguration.yaml to see the Kubernetes resources and actions
+Check mutatingwebhook.yaml to see the Kubernetes resources and actions
 that will be intercepted by this mutating webhook.
 
 
@@ -53,7 +53,7 @@ kubectl api-versions
 4. Set Environment Variables
 ```
 GO111MODULE=on
-GOPATH=/home/vagrant/go
+GOPATH=<Path to your go workspace> 
 GOOS=linux
 ``` 
 
@@ -99,7 +99,7 @@ Tested on
 Contributions
 --------------
 If you try the code, we would love to hear from you. Please consider opening a PR with the information
-about the configuration that you tested on. We would like to improve the list of Tested on platforms.
+about the platform that you tested on. We would like to improve the list of Tested on platforms.
 
 
 References
