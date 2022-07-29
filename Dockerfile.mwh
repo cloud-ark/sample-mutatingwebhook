@@ -1,0 +1,3 @@
+FROM ubuntu:20.04
+COPY test-mwh /root/
+ENTRYPOINT ["/root/test-mwh"]
