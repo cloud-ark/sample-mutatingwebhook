@@ -14,11 +14,11 @@ Check mutatingwebhookconfiguration.yaml to see the Kubernetes resources and acti
 that will be intercepted by this mutating webhook.
 
 
-Background:
-------------
+Background
+----------
 
 At CloudARK, our [KubePlus Operator](https://github.com/cloud-ark/kubeplus) depends
-on a working MutatingWebhook setup for its operation. When we started building KubePlus,
+on a working MutatingWebhook setup. When we started building KubePlus,
 the AdmissionRegistration API was still in ```v1beta1``` version. We built our webhook
 using the spec properties and features available in that version. This worked till Kubernetes
 versions < 1.22 were still around in public cloud providers. Lately though, we started
@@ -35,7 +35,7 @@ compulsory. One of them is the signerName. We tried using ```kubernetes.io/kubel
 approach is to create a self-signed CA and use it's certificate to sign the key of the webhook server [2,3,4]. 
 
 
-Steps to test:
+Steps to test
 --------------
 1. Create a Minikube cluster with Kubernetes version >= v1.22.0 
 ```
@@ -91,18 +91,18 @@ kubectl delete mutatingwebhookconfigurations test-mwh
 kubectl delete -f deploy-mwh.yaml
 ```
 
-Tested on:
+Tested on
 ----------
 1. Minikube - Server version v1.21.0, July 28, 2022
 
 
-Contributions:
+Contributions
 --------------
 If you try the code, we would love to hear from you. Please consider opening a PR with the information
 about the configuration that you tested on. We would like to improve the list of Tested on platforms.
 
 
-References:
+References
 ------------
 [1] https://github.com/morvencao/kube-mutating-webhook-tutorial/blob/master/deployment/webhook-create-signed-cert.sh
 
